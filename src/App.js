@@ -10,7 +10,7 @@ function App() {
   const handleClick = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=b5f63519b6bf45b3a4555530232808&q=${city}`);
+      const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=b5f63519b6bf45b3a4555530232808&q=${city}`);
       setWeatherData(response.data);
       setLoading(false);
     } catch (error) {
