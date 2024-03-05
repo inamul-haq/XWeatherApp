@@ -23,25 +23,25 @@ function App() {
   return (
     <div>
       <div className='App'>
-        <input onChange={(e) => setCity(e.target.value)} className='inputField' type='text' placeholder='Enter city name' />
+        <input type='text' onChange={(e) => setCity(e.target.value)} className='inputField'  placeholder='Enter city name' />
         <button onClick={handleClick} className='searchButton'>Search</button>
       </div>
       <div className='ResultContainer'>
         {loading ? <p>Loading data...</p> : weatherData && (
           <div className='ResultContainer'>
-          <div className='weather-card'>
+          <div className='weather-cards'>
             <h1>Temperature</h1>
             <p>{weatherData.current.temp_c}°C</p>
           </div>
-          <div className='weather-card'>
+          <div className='weather-cards'>
             <h1>Humidity</h1>
             <p>{weatherData.current.humidity}%</p>
           </div>
-          <div className='weather-card'>
+          <div className='weather-cards'>
             <h1>Condition</h1>
             <p>{weatherData.current.condition.text}</p>
           </div>
-          <div className='weather-card'>
+          <div className='weather-cards'>
             <h1>Wind Speed</h1>
             <p>{weatherData.current.wind_kph} kph</p>
           </div>
